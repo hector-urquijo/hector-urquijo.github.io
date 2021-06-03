@@ -1,1 +1,2 @@
-# hector-urquijo.github.io
+# autoridad.github.io
+Repositorio para consultar información de autoridades indigenas
