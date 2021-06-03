@@ -4,9 +4,6 @@ author: "GRUPO GIR DAIRM"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Autoridades Indígenas electas para el periodo 2021
 
@@ -36,7 +33,7 @@ Para generar la Certificación ingrese al siguiente link: <https://datos.mininte
 2.- Digite o pegue la información a buscar.
 
 
-La información se puede exportar.
+La información se puede exportar o copiar.
 
 
 

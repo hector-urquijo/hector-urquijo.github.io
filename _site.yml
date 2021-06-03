@@ -1,7 +1,7 @@
 name: "Autoridad_Indigena"
 #output-dir: "."
 navbar:
-  title: "Autoridad Indigena 2021"
+  title: "Autoridad Indigena 2021."
   left:
     - text: "Inicio"
       href: index.html
