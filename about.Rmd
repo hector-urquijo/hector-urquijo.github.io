@@ -1,0 +1,16 @@
+---
+title: "CENSO RESGIARDO Y COMUNIDADES INDIGENAS DE COLOMBIA"
+author: "GRUPO GIR DAIRM"
+output: html_document
+---
+
+## PAGINA EN CONSTRUCCION
+
+
+En esta página encontrara información de censos de las Comunidades y/o Resguardos indígenas que están registradas en el sistema de Información Indígena de Colombia  (SIIC).
+
+Para generar la Certificación de pertenencia ingrese al siguiente link: <https://datos.mininterior.gov.co/indigenas/index>
+
+
+
+

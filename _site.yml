@@ -1,0 +1,16 @@
+name: "Autoridad_Indigena"
+output_dir: "."
+navbar:
+  title: "Autoridad Indigena 2021."
+  left:
+    - text: "Inicio"
+      href: index.html
+    - text: "Censo"
+      href: about.html
+    - text: "autoridades Indigenas"  
+      href: Autoridades_Registradas_2021.html
+      
+output:
+  html_document:
+    theme: cosmo
+    highlight: textmate
