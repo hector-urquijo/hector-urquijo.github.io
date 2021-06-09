@@ -1,5 +1,5 @@
 ---
-title: "AUTORIDADES INDIGENAS DE COLOMBIA"
+title: "AUTORIDADES INDIGENAS DE COLOMBIA SEGUN CARPETA COMPARTIDA"
 author: "GRUPO GIR DAIRM"
 output: html_document
 ---
@@ -14,7 +14,6 @@ En esta página encontrara información de las autoridades indígenas que están
 Para generar la Certificación ingrese al siguiente link: <https://datos.mininterior.gov.co/VentanillaUnica/Indigenas/autoridades/certificado>.
 
 
-
 ```{r , warning=FALSE,cache=FALSE,message=FALSE,echo=FALSE}
         library(dplyr);library(DT);library(data.table)
         library(readxl);library(xlsx)
@@ -22,8 +21,8 @@ Para generar la Certificación ingrese al siguiente link: <https://datos.mininte
 
 
 ```{r, echo=FALSE}
-   autoridad <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja1")
-      autoridadver <- as.data.frame(autoridad)
+   autoridadexcel <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja2")
+      autoridadverexcel <- as.data.frame(autoridadexcel)
 ```
 
 ## Busqueda
@@ -39,8 +38,8 @@ La información se puede exportar o copiar.
 
 
 ```{r autoridadver, echo=FALSE}
-   # head(autoridadver, n= 350)  %>% datatable() 
-    autoridadver %>%
+   # head(autoridadverexcel, n= 400)  %>% datatable() 
+    autoridadverexcel %>%
       datatable(extensions = 'Buttons',
                 options = list(dom = 'Blfrtip',
                              buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),

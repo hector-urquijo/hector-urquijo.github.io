@@ -7,8 +7,10 @@ navbar:
       href: index.html
     - text: "Censo"
       href: about.html
-    - text: "autoridades Indigenas"  
+    - text: "autoridades Indigenas en SIIC"  
       href: Autoridades_Registradas_2021.html
+    - text: "Autoridades cARPETA COMPARTIDA"  
+      href: excel_autoridades.html
       
 output:
   html_document:
