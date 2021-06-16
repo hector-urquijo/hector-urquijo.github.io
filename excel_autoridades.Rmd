@@ -5,7 +5,7 @@ output: html_document
 ---
 
 
-## Autoridades Indígenas electas para el periodo 2021
+## Autoridades Indígenas relaciondas en las carpetas  compartidas 2021
 
 
 
@@ -38,7 +38,7 @@ La información se puede exportar o copiar.
 
 
 ```{r autoridadver, echo=FALSE}
-   # head(autoridadverexcel, n= 400)  %>% datatable() 
+   # head(autoridadverexcel, n= 14000)  %>% datatable() 
     autoridadverexcel %>%
       datatable(extensions = 'Buttons',
                 options = list(dom = 'Blfrtip',

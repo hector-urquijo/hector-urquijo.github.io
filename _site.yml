@@ -9,7 +9,7 @@ navbar:
       href: about.html
     - text: "autoridades Indigenas en SIIC"  
       href: Autoridades_Registradas_2021.html
-    - text: "Autoridades cARPETA COMPARTIDA"  
+    - text: "Autoridades registrada en carpeta compartida"  
       href: excel_autoridades.html
       
 output:
