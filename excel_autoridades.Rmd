@@ -20,7 +20,7 @@ Para generar la Certificación ingrese al siguiente link: <https://datos.mininte
 ```
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE}
    autoridadexcel <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja2")
       autoridadverexcel <- as.data.frame(autoridadexcel)
 ```

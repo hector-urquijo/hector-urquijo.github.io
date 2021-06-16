@@ -1,5 +1,5 @@
 ---
-title: "AUTORIDADES INDIGENAS DE COLOMBIA"
+title: "AUTORIDADES INDIGENAS DE COLOMBIA."
 author: "GRUPO GIR DAIRM"
 output: html_document
 ---
