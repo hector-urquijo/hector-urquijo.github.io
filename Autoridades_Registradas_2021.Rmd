@@ -1,11 +1,11 @@
 ---
-title: "AUTORIDADES INDIGENAS DE COLOMBIA."
+title: "AUTORIDADES INDIGENAS DE COLOMBIA VIGENTES"
 author: "GRUPO GIR DAIRM"
 output: html_document
 ---
 
 
-## Autoridades Indígenas electas para el periodo 2021
+## Autoridades Indígenas electas Vigentes
 
 
 
@@ -28,7 +28,7 @@ Para generar la Certificación ingrese al siguiente link: <https://datos.mininte
 
 ## Busqueda
 
-1.- seleccione la columna por la cual desea hacer la busqueda.
+1.- seleccione la columna por la cual desea realizar la busqueda.
 
 2.- Digite o pegue la información a buscar.
 
