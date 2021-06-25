@@ -44,6 +44,6 @@ La información se puede exportar o copiar.
                 options = list(dom = 'Blfrtip',
                              buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
                              lengthMenu = list(c(10,25,50,-1),
-                                               c(10,25,50,"All"))))
+                                               c(10,25,50,"All"))))%>%formatDate(c(2,13), "toLocaleDateString")
 ```
 
