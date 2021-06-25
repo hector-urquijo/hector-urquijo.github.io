@@ -27,13 +27,14 @@ Para generar la Certificación ingrese al siguiente link: <https://datos.mininte
 
 ## Busqueda
 
-1.- seleccione la columna por la cual desea realizar la busqueda.
 
-2.- Digite o pegue la información a buscar.
+1.- Ubique el cuadro de busqueda **(Search)**
+
+2.- Digite o pegue la informaciÓn que desea buscar.
+
 
 
 La información se puede exportar o copiar.
-
 
 
 
