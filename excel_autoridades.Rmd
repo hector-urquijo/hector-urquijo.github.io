@@ -38,7 +38,7 @@ La información se puede exportar o copiar.
 
 
 
-```{r autoridadver, echo=FALSE}
+```{r autoridadverexcel, echo=FALSE}
    # head(autoridadverexcel, n= 14000)  %>% datatable() 
     autoridadverexcel %>%
       datatable(extensions = 'Buttons',

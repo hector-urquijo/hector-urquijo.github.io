@@ -1,0 +1,46 @@
+---
+title: "CERTIFICACIONES GENERADAS EN SIGOB"
+author: "GRUPO GIR DAIRM"
+output: html_document
+---
+
+
+## cERTIFICACIONES Autoridades, Asociaciones  Indígenas generadas en SIGOB 
+
+
+
+
+
+```{r , warning=FALSE,cache=FALSE,message=FALSE,echo=FALSE}
+        library(dplyr);library(DT);library(data.table)
+        library(readxl);library(xlsx)
+```
+
+
+```{r, echo=FALSE, warning=FALSE}
+   cersigob <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja4")
+      cersigobver <- as.data.frame(cersigob)
+```
+
+## Busqueda
+
+
+1.- Ubique el cuadro de busqueda **(Search)**
+
+2.- Digite o pegue la informaciÓn que desea buscar.
+
+
+
+La información se puede exportar o copiar.
+
+
+
+```{r cersigobver, echo=FALSE}
+     cersigobver %>%
+      datatable(extensions = 'Buttons',
+                options = list(dom = 'Blfrtip',
+                             buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                             lengthMenu = list(c(10,25,50,-1),
+                                               c(10,25,50,"All"))))%>%formatDate(4, "toLocaleDateString")
+#getFullYear(),toLocaleDateString('en-GB')
+```
