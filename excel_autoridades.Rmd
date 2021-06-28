@@ -5,7 +5,7 @@ output: html_document
 ---
 
 
-## Autoridades Indígenas relaciondas en las carpetas  compartidas 
+## Autoridades Indígenas relacionadas en las carpetas  compartidas 
 
 
 

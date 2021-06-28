@@ -1,11 +1,11 @@
 ---
-title: "CERTIFICACIONES GENERADAS EN SIGOB"
+title: "CERTIFICACIONES GENERADAS EN SIGOB 2021"
 author: "GRUPO GIR DAIRM"
 output: html_document
 ---
 
 
-## cERTIFICACIONES Autoridades, Asociaciones  Indígenas generadas en SIGOB 
+## Certificaciones Autoridades, Asociaciones  Indígenas generadas en SIGOB 
 
 
 
