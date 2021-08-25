@@ -7,10 +7,44 @@ output: html_document
 ## PAGINA EN CONSTRUCCION
 
 
-En esta página encontrara información de censos de las Comunidades y/o Resguardos indígenas que están registradas en el sistema de Información Indígena de Colombia  (SIIC).
+En esta página encontrara información del ultimo censo cargado de las Comunidades y/o Resguardos indígenas que están registradas en el sistema de Información Indígena de Colombia  (SIIC).
 
 Para generar la Certificación de pertenencia ingrese al siguiente link: <https://datos.mininterior.gov.co/indigenas/index>
 
 
 
+
+```{r , warning=FALSE,cache=FALSE,message=FALSE,echo=FALSE}
+        library(dplyr);library(DT);library(data.table)
+        library(readxl);library(xlsx)
+```
+
+
+```{r, echo=FALSE}
+   censo <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja5")
+      censover <- as.data.frame(censo)
+```
+
+## COMO BUSCAR UN REGISTRO
+
+1.- Ubique el cuadro de busqueda **(Search)**
+
+2.- Digite o pegue la informaciÓn que desea buscar.
+
+
+
+La información se puede exportar o copiar.
+
+
+
+
+```{r censover, echo=FALSE}
+   # head(censover, n= 350)  %>% datatable() 
+    censover %>%
+      datatable(extensions = 'Buttons',
+                options = list(dom = 'Blfrtip',
+                             buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                             lengthMenu = list(c(10,25,50,-1),
+                                               c(10,25,50,"All")))) #%>%formatDate(c(1,6,7,13), "toLocaleDateString")
+```
 
