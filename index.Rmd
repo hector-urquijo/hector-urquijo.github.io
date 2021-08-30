@@ -8,6 +8,6 @@ output: html_document
 <P>En esta página encontrara información de las autoridades indigenas de Colombia.</P>
 <P>Para consultar la información de las autoridades registradas en el SIIC, seleccione **autoridades Indigenas en SIIC**.</P>
 <p>Para consultar la información de las autoridades registradas en carpetas compartidas, seleccione **Autoridades registrada en carpeta compartida**.</P>
-<P>La información de los censos poblacionales de las comunidades indigenas aun no esta disponible.</P>
+<P>La información de los censos poblacionales de las comunidades indigenas corresponde a los censos cargados en SIIC en el 2021.</P>
 </body>
 </html>
