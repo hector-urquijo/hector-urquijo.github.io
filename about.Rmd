@@ -5,7 +5,7 @@ output: html_document
 ---
 
 En esta página encontrara información del ultimo censo cargado de las Comunidades y/o Resguardos indígenas que están registradas en el sistema de Información Indígena de Colombia  (SIIC).
-
+Para generar la Certificación de pertenencia ingrese al siguiente link:  <https://datos.mininterior.gov.co/VentanillaUnica/indigenas/censos/Persona>
 
 
 ```{r , warning=FALSE,cache=FALSE,message=FALSE,echo=FALSE}
