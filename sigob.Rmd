@@ -1,11 +1,11 @@
 ---
-title: "CERTIFICACIONES GENERADAS EN SIGOB 2021"
+title: "CERTIFICACIONES AUTORIDADES VITALICIAS LA GUAJIRA"
 author: "GRUPO GIR DAIRM"
 output: html_document
 ---
 
 
-## Certificaciones Autoridades, Asociaciones  Indígenas generadas en SIGOB 
+## Certificaciones vitalicias vigentes, Autoridades indigenas departamento de la Guajira
 
 
 
@@ -18,7 +18,7 @@ output: html_document
 
 
 ```{r, echo=FALSE, warning=FALSE}
-   cersigob <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja4")
+   cersigob <- read_excel("Autoridad_indigena.xlsx", sheet ="Hoja3")
       cersigobver <- as.data.frame(cersigob)
 ```
 
@@ -41,6 +41,7 @@ La información se puede exportar o copiar.
                 options = list(dom = 'Blfrtip',
                              buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
                              lengthMenu = list(c(10,25,50,-1),
-                                               c(10,25,50,"All"))))%>%formatDate(4, "toLocaleDateString")
+                                               c(10,25,50,"All"))))%>%formatDate(c(1,6,7,13), "toLocaleDateString")
 #getFullYear(),toLocaleDateString('en-GB')
+
 ```

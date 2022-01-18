@@ -11,7 +11,7 @@ navbar:
       href: Autoridades_Registradas_2021.html
     - text: "Autoridades registrada en carpeta compartida"  
       href: excel_autoridades.html
-    - text: "Certificaciones en SIGOB"
+    - text: "Autoridades Indigenas Vitalicias La Guajira"
       href: sigob.html
       
 output:
