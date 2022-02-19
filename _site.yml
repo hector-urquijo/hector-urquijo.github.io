@@ -7,7 +7,7 @@ navbar:
       href: index.html
     - text: "Censo"
       href: about.html
-    - text: "Autoridades Indigenas en SIIC"  
+    - text: "Autoridades Indigenas VIGENTES en SIIC"  
       href: Autoridades_Registradas_2021.html
     - text: "Autoridades registrada en carpeta compartida"  
       href: excel_autoridades.html
