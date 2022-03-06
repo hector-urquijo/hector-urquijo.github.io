@@ -9,6 +9,6 @@ output: html_document
 <P>En esta páginas encontrara información de las autoridades indigenas de Colombia.</P>
 <P>Para consultar la información de las autoridades vigentes, registradas en el SIIC, seleccione **autoridades Indigenas en SIIC**.</P>
 <p>Para consultar la información de las autoridades registradas en carpetas compartidas, seleccione **Autoridades registrada en carpeta compartida**.</P>
-<P>Para consultar la información de las autoridades vitalicias vigentes del departamento de la Guajira registradas en el SIIC, seleccione.**Autoridades Indigenas Vitalicias La Guajira**</P>
+<P>Para consultar la información de las certificacionesvgeneradas en SIGOB , seleccione.**SIGOB**</P>
 </body>
 </html>
