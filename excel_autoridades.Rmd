@@ -1,11 +1,11 @@
 ---
-title: "AUTORIDADES INDIGENAS DE COLOMBIA SEGUN CARPETA COMPARTIDA"
+title: "HISTORICO AUTORIDADES INDIGENAS DE COLOMBIA REGISTRADAS EN SIIC"
 author: "GRUPO GIR DAIRM"
 output: html_document
 ---
 
 
-## Autoridades Indígenas relacionadas en las carpetas  compartidas 
+## Historico autoridades Indígenas registradas en SIIC 
 
 
 
@@ -45,7 +45,7 @@ La información se puede exportar o copiar.
                 options = list(dom = 'Blfrtip',
                              buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
                              lengthMenu = list(c(10,25,50,-1),
-                                               c(10,25,50,"All"))))%>%formatDate(c(2,13), 'toLocaleDateString')
+                                               c(10,25,50,"All"))))%>%formatDate(c(2,12,13,14,15,16), 'toLocaleDateString')
 #getFullYear(),toLocaleDateString('en-GB')
 ```
 
