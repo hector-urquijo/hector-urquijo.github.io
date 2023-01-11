@@ -9,7 +9,7 @@ output: html_document
 
 
 
-En esta página encontrara información de las autoridades indígenas vigentes, registradas en el sistema de Información Indígena de Colombia (SIIC).
+En esta página encontrara información de las autoridades indígenas vigentes, registradas en el sistema de Información Indígena de Colombia (SIIC)
 
 Para generar la Certificación ingrese al siguiente link: <https://datos.mininterior.gov.co/VentanillaUnica/Indigenas/autoridades/certificado>.
 
