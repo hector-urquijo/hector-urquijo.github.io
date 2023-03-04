@@ -13,7 +13,8 @@ navbar:
       href: excel_autoridades.html
     - text: "SIGOB"
       href: sigob.html
-      
+    - text: "Comunidades en Conflicto"  
+      href: impug.html
 output:
   html_document:
     theme: cosmo

@@ -1,0 +1,48 @@
+---
+title: "COMUNIDADES INDIGENAS EN CONFLICTO"
+author: "GRUPO GIR DAIRM"
+output: html_document
+---
+  
+  
+  ## Comunidades Indígenas en conflicto
+  
+  
+  
+  En esta página encontrara información de las comunidades indígenas en conflicto, 
+
+
+
+```{r , warning=FALSE,cache=FALSE,message=FALSE,echo=FALSE}
+library(dplyr);library(DT);library(data.table)
+library(readxl);library(xlsx)
+```
+
+
+```{r, echo=FALSE}
+ comuconflicto <- read_excel("Autoridad_indigena.xlsx", sheet ="impug")
+ comuconflictover <- as.data.frame(comuconflicto)
+```
+
+## COMO BUSCAR UN REGISTRO
+
+1.- Ubique el cuadro de busqueda **(Search)**
+  
+  2.- Digite o pegue la informaciÓn que desea buscar.
+
+
+
+La información se puede exportar o copiar.
+
+
+
+
+```{r autoridadver, echo=FALSE}
+# head(autoridadver, n= 350)  %>% datatable() 
+comuconflictover %>%
+  datatable(extensions = 'Buttons',
+            options = list(dom = 'Blfrtip',
+                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                           lengthMenu = list(c(10,25,50,-1),
+                                            c(10,25,50,"All")))) #%>%formatDate(c(1,11,12,13,14,15),                                                                               "toLocaleDateString")
+```
