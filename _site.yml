@@ -5,7 +5,7 @@ navbar:
   left:
     - text: "Inicio"
       href: index.html
-    - text: "Censo 2022"
+    - text: "Censo 2023"
       href: about.html
     - text: "Autoridades Indigenas en SIIC Vigentes"  
       href: Autoridades_Registradas_2021.html
