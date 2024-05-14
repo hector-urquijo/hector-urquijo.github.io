@@ -1,0 +1,47 @@
+---
+title: "COMUNIDADES INDIGENAS LA GUAJIRA"
+author: "GRUPO GIR DAIRM"
+output: html_document
+---
+  
+  
+## Comunidades Indígenas La Guajira
+  
+  
+  
+  En esta página encontrara información de las comunidades indígenas de la Guajira, 
+
+```{r , warning=FALSE,cache=FALSE,message=FALSE,echo=FALSE}
+library(dplyr);library(DT);library(data.table)
+library(readxl);library(xlsx)
+```
+  
+
+```{r, echo=FALSE, warning=FALSE}
+cersigob1 <- read_excel("Autoridad_indigena.xlsx", sheet ="comun")
+cersigobver2 <- as.data.frame(cersigob1)
+```
+
+## Busqueda
+
+
+1.- Ubique el cuadro de busqueda **(Search)**
+  
+  2.- Digite o pegue la informaciÓn que desea buscar.
+
+
+
+La información se puede exportar o copiar.
+
+
+
+```{r cersigobver2, echo=FALSE}
+cersigobver2 %>%
+  datatable(extensions = 'Buttons',
+            options = list(dom = 'Blfrtip',
+                           buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),
+                           lengthMenu = list(c(10,25,50,-1),
+                                             c(10,25,50,"All"))))%>%formatDate(c(3), "toLocaleDateString")
+#getFullYear(),toLocaleDateString('en-GB')
+
+```
