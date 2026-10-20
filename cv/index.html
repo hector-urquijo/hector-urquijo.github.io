@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Hoja de vida de Héctor Urquijo Roncancio, profesional senior funcional en sistemas de información, datos y gestión pública.">
+<title>Héctor Urquijo Roncancio</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap">
+<style>
+/* Layout: lateral rail (contacto, formación, competencias) + columna principal (perfil, logros, experiencia). En teléfono todo apila. */
+:root{
+  --bg:#f5f6f8;
+  --surface:#ffffff;
+  --fg:#1d2433;
+  --muted:#5b6578;
+  --rule:#d9dde5;
+  --accent:#1f3864;
+  --accent-soft:#e6ebf5;
+  --accent-fg:#ffffff;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10141c;--surface:#171c27;--fg:#e6e9f0;--muted:#9aa4b8;--rule:#2a3244;
+    --accent:#9db8ee;--accent-soft:#222c44;--accent-fg:#10141c;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10141c;--surface:#171c27;--fg:#e6e9f0;--muted:#9aa4b8;--rule:#2a3244;
+  --accent:#9db8ee;--accent-soft:#222c44;--accent-fg:#10141c;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15px;line-height:1.6;
+  padding-block:32px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.sheet{max-width:1040px;margin:0 auto;background:var(--surface);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+header{padding:40px 40px 28px;border-bottom:1px solid var(--rule)}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(26px,4.6vw,40px);line-height:1.15;margin:0 0 10px;letter-spacing:-.01em;text-wrap:balance}
+.title{font-weight:600;color:var(--accent);margin:0;font-size:16px;text-wrap:balance}
+.grid{display:grid;grid-template-columns:300px minmax(0,1fr)}
+aside{padding:28px 28px 36px 40px;border-right:1px solid var(--rule);background:var(--accent-soft);min-width:0}
+main{padding:28px 40px 40px 36px;min-width:0}
+h2{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+section{margin-bottom:34px}
+aside section{margin-bottom:28px}
+p{margin:0 0 12px;max-width:68ch}
+.contact{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:14px}
+.contact span{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.contact li{overflow-wrap:anywhere}
+.edu{list-style:none;margin:0;padding:0;display:grid;gap:12px;font-size:14px}
+.edu b{display:block;font-weight:600}
+.edu small{color:var(--muted);font-size:13px}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:1px 7px;border:1px solid var(--accent);color:var(--accent);border-radius:3px;margin-left:4px;white-space:nowrap}
+.skills h3{font-size:13px;font-weight:600;margin:0 0 6px}
+.skills ul{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.skills li{font-size:12.5px;padding:2px 8px;background:var(--surface);border:1px solid var(--rule);border-radius:3px;line-height:1.5}
+ul.bul{margin:0 0 12px;padding-left:20px}
+ul.bul li{margin-bottom:7px;padding-left:2px}
+ul.bul li::marker{color:var(--accent)}
+.job{margin-bottom:26px}
+.job h3{font-size:16px;font-weight:600;margin:0;line-height:1.35}
+.job h3 span{font-weight:400;color:var(--muted)}
+.dates{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+.terr{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px 18px;margin:8px 0 0;font-size:13.5px}
+.terr div{border-top:1px solid var(--rule);padding-top:6px}
+.terr b{display:block;font-weight:600}
+.terr span{color:var(--muted)}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:820px){
+  header{padding:28px 20px 20px}
+  .grid{grid-template-columns:minmax(0,1fr)}
+  aside{border-right:0;border-bottom:1px solid var(--rule);padding:24px 20px}
+  main{padding:24px 20px 32px}
+  body{padding-block:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+<header>
+  <h1>Héctor Clemente Urquijo Roncancio</h1>
+  <p class="title">Profesional Senior Funcional · Gestión de TI con Enfoque Territorial e Intercultural · Cercanía Estado-Comunidad</p>
+</header>
+
+<div class="grid">
+<aside>
+  <section>
+    <h2>Contacto</h2>
+    <ul class="contact">
+      <li><span>Correo</span>hectorurquijo7@hotmail.com</li>
+      <li><span>Ciudad</span>Bogotá, Colombia</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Educación</h2>
+    <ul class="edu">
+      <li><b>Construye con IA y agentes</b><small>Oracle University, programa de la Secretaría Distrital de Desarrollo Económico de Bogotá · 2026</small><span class="tag">en curso</span></li>
+      <li><b>Especialización en Interculturalidad y Estudios de Género</b><small>Universidad Autónoma de Occidente, Cali · 2026</small></li>
+      <li><b>Especialización Tecnológica en Gestión de Bases de Datos</b><small>SENA, Soacha · 2013</small></li>
+      <li><b>Diplomado en Nuevas Tecnologías en Comunicaciones</b><small>Universidad Manuela Beltrán · 2007</small></li>
+      <li><b>Ingeniero de Sistemas</b><small>Universidad Manuela Beltrán · 1996 – 2002</small></li>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>Competencias clave</h2>
+    <h3>IA (en formación)</h3>
+    <ul>
+      <li>IA generativa: Claude (mayor énfasis), ChatGPT, Gemini</li>
+      <li>Fundamentos de prompts y agentes de IA</li>
+    </ul>
+    <h3>Análisis y sistemas</h3>
+    <ul>
+      <li>Análisis y gestión de requerimientos</li>
+      <li>Casos de uso y workflows</li>
+      <li>Documentación funcional</li>
+      <li>Pruebas funcionales y validación</li>
+      <li>CRM</li>
+      <li>Gestión de proyectos de TI</li>
+      <li>Ingeniería de software aplicada a la gestión pública y social</li>
+    </ul>
+    <h3>Datos</h3>
+    <ul>
+      <li>SQL</li>
+      <li>PL/SQL</li>
+      <li>Diseño y administración de bases de datos</li>
+      <li>Access avanzado</li>
+      <li>ETL</li>
+      <li>Power BI</li>
+      <li>Power Query y DAX</li>
+      <li>Excel avanzado</li>
+      <li>R</li>
+      <li>Calidad y gobierno de datos</li>
+      <li>KPI y tableros de control</li>
+      <li>Automatización de procesos</li>
+    </ul>
+    <h3>Territorio y comunidad</h3>
+    <ul>
+      <li>Liderazgo y coordinación de equipos interseccionales</li>
+      <li>Relacionamiento con áreas de negocio</li>
+      <li>Trabajo de campo en territorios remotos</li>
+      <li>Fortalecimiento institucional en el territorio</li>
+      <li>Cercanía Estado-Comunidad</li>
+      <li>Gestión y respuesta de PQR</li>
+      <li>Atención al ciudadano</li>
+      <li>Capacitación a comunidades de base</li>
+      <li>Enfoque intercultural y de género</li>
+      <li>Trabajo con comunidades étnicas, afrodescendientes y población diversa</li>
+    </ul>
+  </section>
+</aside>
+
+<main>
+  <section>
+    <h2>Perfil profesional</h2>
+    <p>Ingeniero de Sistemas con más de 15 años de experiencia como profesional funcional y analista de negocio en el análisis, diseño, construcción y aseguramiento de calidad de sistemas de información y soluciones de TI para los sectores de telecomunicaciones, estadística oficial y gestión pública. Experiencia comprobada en levantamiento y gestión de requerimientos, elaboración de casos de uso y diseño de workflows, desarrollo de scripts en PL/SQL, administración de bases de datos, procesos ETL, pruebas funcionales y validación en ambientes de prueba previos a despliegue en producción.</p>
+    <p>Mi trayectoria combina esta base técnica con un fuerte componente territorial: he liderado y participado en trabajo de campo descentralizado y capacitaciones presenciales, llevando la gestión de la información y la presencia del Estado directamente a los territorios y a las comunidades de base. Esta experiencia me ha permitido entender de primera mano las particularidades territoriales y culturales que debe considerar una solución tecnológica para ser realmente útil y apropiada por sus usuarios finales, y reafirma mi convicción de que la gestión pública se fortalece cuando se construye desde el territorio y con la comunidad, no solo desde el nivel central.</p>
+    <p>Me encuentro en etapa de aprendizaje y formación en inteligencia artificial generativa: utilizo herramientas como Claude (con mayor énfasis), ChatGPT y Gemini, y actualmente curso «Construye con IA y agentes» en Oracle University, a través de la Secretaría Distrital de Desarrollo Económico de Bogotá, con el fin de incorporar la IA y los agentes como apoyo a la automatización de procesos, el análisis de información y la documentación funcional en la gestión pública.</p>
+    <p>Mi empatía y capacidad de comprensión hacia las personas, en especial hacia las poblaciones más vulnerables, me han permitido construir espacios genuinos de diálogo para conocer de cerca sus necesidades y problemáticas, generando relaciones de confianza con autoridades y comunidades indígenas, incluyendo la participación en espacios propios de sus tradiciones. Este enfoque se sustenta en mi Especialización en Interculturalidad y Estudios de Género, y en el manejo de la gestión y respuesta de Peticiones, Quejas y Reclamos (PQR) en entidades del Estado, garantizando siempre un trato digno, inclusivo y oportuno.</p>
+  </section>
+
+  <section>
+    <h2>Presencia en territorio</h2>
+    <p>Trabajo de campo descentralizado y capacitaciones presenciales en:</p>
+    <div class="terr">
+      <div><b>Chocó</b><span>Unguía</span></div>
+      <div><b>Caldas</b><span>varios municipios</span></div>
+      <div><b>Cauca</b><span>varios municipios</span></div>
+      <div><b>Córdoba</b><span>Montería</span></div>
+      <div><b>Vichada</b><span>Puerto Carreño, Cumaribo</span></div>
+      <div><b>Guainía</b><span>Inírida</span></div>
+      <div><b>Nariño</b><span>Llorente</span></div>
+      <div><b>La Guajira</b><span>Uribía, Barrancas, Hatonuevo, Maicao y Nazareth, el corregimiento más apartado de Colombia</span></div>
+    </div>
+    <p class="note">Además de Bogotá y otras regiones del país.</p>
+  </section>
+
+  <section>
+    <h2>Logros clave</h2>
+    <ul class="bul">
+      <li>Diseñé e implementé una solución de información en Access que centralizó y optimizó la atención al cliente en los 7 puntos de atención personalizada de ETB en Bogotá, fortaleciendo el seguimiento de la gestión comercial.</li>
+      <li>Diseñé y administré una base de datos funcional para el Sistema de Información Indígena de Colombia (SIIC, Ministerio del Interior), automatizando la validación y consolidación de información y reduciendo tiempos de procesamiento.</li>
+      <li>Llevé la gestión del Estado directamente al territorio: lideré y participé en trabajo de campo descentralizado y jornadas de capacitación, fortaleciendo la presencia institucional y el vínculo directo con comunidades de base.</li>
+      <li>Resolví incidentes críticos de la base de datos Sofía Plus (SENA) mediante el desarrollo de scripts en PL/SQL, verificando cada solución en ambiente de pruebas antes de su paso a producción.</li>
+      <li>Coordiné equipos de campo a nivel nacional para el DANE, diseñando indicadores de gestión (KPI) diarios que permitieron controlar productividad, calidad y cumplimiento de metas operativas.</li>
+      <li>Lideré y coordiné equipos de trabajo interseccionales, articulando perspectivas técnica, territorial, étnica y de género para planear, ejecutar y hacer seguimiento a las actividades en campo y en oficina.</li>
+      <li>Construí espacios de diálogo y confianza con autoridades y comunidades indígenas y afrodescendientes en territorio, aplicando un enfoque intercultural y de género que facilitó el acceso equitativo a la información y el respeto por los saberes propios.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experiencia profesional</h2>
+
+    <div class="job">
+      <h3>Consultor Independiente en Asuntos Étnicos, Campesinos y de Género</h3>
+      <p class="dates">Septiembre 2024 – Actualidad</p>
+      <ul class="bul">
+        <li>Presto servicios de consultoría y acompañamiento, a pequeña escala, en asuntos étnicos, campesinos y de género, aplicando el enfoque intercultural y la experiencia de trabajo con comunidades y autoridades étnicas adquirida en el territorio.</li>
+        <li>Integro mi formación en gestión de información y sistemas con el enfoque diferencial, para apoyar el análisis y la organización de información en temas poblacionales y territoriales.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Asesor Informático, Analista Funcional <span>· Ministerio del Interior de Colombia (DAIRM)</span></h3>
+      <p class="dates">Abril 2021 – Agosto 2024</p>
+      <ul class="bul">
+        <li>Administré funcionalmente el Sistema de Información Indígena de Colombia (SIIC), asegurando la calidad, consistencia e integridad de la información de autoridades, autocensos, comunidades y resguardos indígenas.</li>
+        <li>Gestioné el ciclo completo de datos: recepción, consolidación, validación, depuración y transformación de bases en Excel, con una solución desarrollada en Access para optimizar la información antes de su carga al SIIC.</li>
+        <li>Ejecuté procesos ETL y controles de calidad para garantizar información confiable en la generación de indicadores, seguimiento de gestión e informes ejecutivos.</li>
+        <li>Administré la parametrización funcional del sistema: creación y gestión de usuarios, asignación de permisos y validación de estructuras de información requeridas para la operación.</li>
+        <li>Realicé trabajo de campo descentralizado y jornadas de capacitación presencial en municipios y territorios de Chocó, Caldas, Cauca, Córdoba, Vichada, Guainía, Nariño y La Guajira, actualizando información en tiempo real en el SIIC directamente en territorio y coordinando equipos locales de apoyo (por ejemplo, capacitación de equipo en Uribía, 2024).</li>
+        <li>Capacité y acompañé personalizadamente a autoridades, líderes y funcionarios de comunidades indígenas en distintas regiones del país, promoviendo el diálogo intercultural, el acceso equitativo a la información y el respeto por los saberes propios.</li>
+        <li>Construí relaciones de confianza con autoridades y comunidades a partir de la empatía y la escucha activa, generando espacios de diálogo directo en territorio para comprender sus necesidades, incluyendo la participación respetuosa en espacios y ceremonias propias de las comunidades (por ejemplo, una ceremonia de purificación en Llorente); en el marco de este trabajo pernocté por invitación de una autoridad indígena en una comunidad de La Guajira, como parte del compromiso de cercanía con la población atendida.</li>
+        <li>Gestioné la respuesta a Peticiones, Quejas y Reclamos (PQR) y derechos de petición, garantizando un trato digno, inclusivo y oportuno, y participé en reuniones de seguimiento con áreas de negocio.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Asesor Informático, Administrador de Base de Datos <span>· Ministerio del Interior de Colombia (Seguridad y Convivencia Ciudadana)</span></h3>
+      <p class="dates">Septiembre 2020 – Diciembre 2020</p>
+      <ul class="bul">
+        <li>Administré, parametricé y di soporte técnico remoto a la base de datos SIGOB CIPRAT, incluyendo gestión de usuarios y seguimiento de procesos.</li>
+        <li>Capacité virtualmente a usuarios del sistema y documenté hallazgos y actas en reuniones técnicas de seguimiento.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Coordinador de Campo <span>· DANE · Encuesta Mensual de Servicios, Bogotá</span></h3>
+      <p class="dates">Julio 2017 – Abril 2018</p>
+      <ul class="bul">
+        <li>Planifiqué, coordiné y di seguimiento a actividades operativas de recolección de información mediante cronogramas y coordinación interinstitucional.</li>
+        <li>Diseñé e implementé indicadores de desempeño diarios en Excel para evaluar productividad, calidad de la información y cumplimiento de metas.</li>
+        <li>Brindé soporte funcional a monitores y usuarios del sistema, validando y gestionando datos dentro de la plataforma tecnológica.</li>
+        <li>Elaboré informes de seguimiento y análisis de resultados para la toma de decisiones operativas y administrativas.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Asesor Informático <span>· DANE · Encuesta de Cultura Política 2017</span></h3>
+      <p class="dates">Marzo 2017 – Junio 2017</p>
+      <ul class="bul">
+        <li>Administré dispositivos móviles de captura de información en campo, asegurando la continuidad operativa del proceso de recolección.</li>
+        <li>Capacité y di soporte funcional a encuestadores en el uso de herramientas tecnológicas de captura.</li>
+        <li>Construí indicadores de gestión diarios para evaluar cobertura, productividad y calidad de la información.</li>
+        <li>Administré la transmisión de bases de datos mediante protocolos FTP hacia los repositorios centrales de procesamiento.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Asesor Informático <span>· SENA</span></h3>
+      <p class="dates">Febrero 2016 – Diciembre 2016</p>
+      <ul class="bul">
+        <li>Diagnostiqué y resolví incidentes de la base de datos Sofía Plus desarrollando scripts en PL/SQL, validando cada solución en entorno de pruebas antes de su implementación en producción.</li>
+        <li>Gestioné usuarios y control de accesos, y di seguimiento a incidentes a través de la plataforma MANTIS.</li>
+        <li>Ejecuté y documenté pruebas funcionales sobre nuevos desarrollos, garantizando su correcto funcionamiento.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Asesor Informático <span>· DANE · Encuesta de Convivencia y Seguridad Ciudadana / Cultura Política 2015</span></h3>
+      <p class="dates">Marzo 2015 – Octubre 2015</p>
+      <ul class="bul">
+        <li>Administré dispositivos móviles y aseguré la continuidad operativa de los procesos de recolección de información en campo.</li>
+        <li>Construí indicadores de gestión diarios y elaboré informes de cobertura y desempeño de los equipos de campo.</li>
+        <li>Administré la transmisión de bases de datos vía FTP hacia los repositorios centrales.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Profesional II <span>· ETB · Empresa de Telecomunicaciones de Bogotá</span></h3>
+      <p class="dates">Julio 2003 – Septiembre 2010</p>
+      <ul class="bul">
+        <li>Diseñé, desarrollé y administré soluciones de información en Access para el análisis de datos, apoyando la gestión comercial, el cálculo de incentivos y la generación de estadísticas organizacionales.</li>
+        <li>Diseñé e implementé una base de datos multiusuario para el control y análisis de la atención al cliente en los 7 puntos de atención personalizada de Bogotá.</li>
+        <li>Participé en la definición de requerimientos funcionales, elaboración de casos de uso, diseño de workflows y construcción de indicadores de gestión (KPI) para proyectos de CRM y atención al cliente.</li>
+        <li>Desarrollé y ejecuté procesos ETL para informes gerenciales, integrando y consolidando información de múltiples fuentes.</li>
+        <li>Elaboré informes ejecutivos y análisis de ventas para los canales comerciales de la organización, soportando la toma de decisiones de la alta dirección.</li>
+        <li>Implementé controles de calidad y validación de información para garantizar la confiabilidad de reportes e indicadores estratégicos.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+</div>
+</div>
+</body>
+</html>
