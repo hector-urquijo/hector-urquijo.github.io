@@ -90,7 +90,7 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
         <button class="bigplay" id="bigPlay" aria-label="Reproducir video con voz">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5v17l14-8.5z" fill="currentColor"/></svg>
         </button>
-        <div class="hint">Toca para ver con voz</div>
+        <div class="hint">Toca para ver con sonido</div>
       </div>
       <div class="overlay endcard" id="endOv" hidden>
         <div class="price">$40.000.000</div>
@@ -181,7 +181,8 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
     });
     timeEl.textContent=fmt(t)+' / '+fmt(v.duration||total);
   }
-  function toggle(){if(v.paused){endOv.hidden=true;var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()}
+  var lock=false;
+  function toggle(){if(lock)return;if(v.paused){endOv.hidden=true;var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()}
 
   v.addEventListener('timeupdate',tick);
   v.addEventListener('loadedmetadata',tick);
@@ -191,8 +192,7 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
   document.getElementById('bigPlay').addEventListener('click',toggle);
   pp.addEventListener('click',toggle);
   document.getElementById('replay').addEventListener('click',function(){seek(0)});
-  var gestureUnmuted=false;
-  v.addEventListener('click',function(){if(gestureUnmuted)return;toggle()});
+  v.addEventListener('click',toggle);
   var hint=document.getElementById('soundHint');
   function syncSound(){
     snd.setAttribute('aria-pressed',String(v.muted));
@@ -214,23 +214,23 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
   });
   setActive(0);
 
-  // Arranque automático: primero con voz; si el navegador lo bloquea, sin sonido y el primer toque lo activa.
-  function unmuteOnGesture(){
-    document.removeEventListener('pointerdown',unmuteOnGesture,true);
-    document.removeEventListener('keydown',unmuteOnGesture,true);
-    if(v.muted&&!v.paused){setMuted(false);gestureUnmuted=true;setTimeout(function(){gestureUnmuted=false},500)}
+  // Arranque automático con voz. Si el navegador lo bloquea, espera y el primer toque lo reproduce con sonido.
+  function startOnGesture(){
+    document.removeEventListener('pointerdown',startOnGesture,true);
+    document.removeEventListener('keydown',startOnGesture,true);
+    if(v.paused&&!v.ended){
+      v.muted=false;
+      var q=v.play();if(q&&q.catch)q.catch(function(){});
+      lock=true;setTimeout(function(){lock=false},500);
+    }
   }
   function autoplay(){
     v.muted=false;
     var p=v.play();
     if(!p||!p.then)return;
-    p.then(syncSound).catch(function(){
-      v.muted=true;
-      var q=v.play();
-      if(q&&q.catch)q.catch(function(){});
-      syncSound();
-      document.addEventListener('pointerdown',unmuteOnGesture,true);
-      document.addEventListener('keydown',unmuteOnGesture,true);
+    p.catch(function(){
+      document.addEventListener('pointerdown',startOnGesture,true);
+      document.addEventListener('keydown',startOnGesture,true);
     });
   }
   autoplay();
