@@ -70,6 +70,9 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
 .num{font-variant-numeric:tabular-nums;font-weight:700;font-size:22px;letter-spacing:.04em;user-select:all}
 .toast{min-height:1.4em;color:var(--muted);font-size:15px}
 .note{color:var(--muted);font-size:15px;margin:22px 0 0;max-width:62ch}
+[hidden]{display:none!important}
+.soundhint{position:absolute;left:12px;right:12px;top:12px;min-height:48px;padding:0 14px;background:var(--accent);color:var(--on-accent);border:0;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center;gap:10px}
+.soundhint svg{width:22px;height:22px;flex:none}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
 
@@ -79,6 +82,10 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
   <section class="player" aria-label="Video de la camioneta">
     <div class="stage">
       <video id="v" src="luv.mp4" poster="poster.jpg" playsinline preload="auto"></video>
+      <button class="soundhint" id="soundHint" type="button" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        Toca para activar el sonido
+      </button>
       <div class="overlay" id="startOv">
         <button class="bigplay" id="bigPlay" aria-label="Reproducir video con voz">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5v17l14-8.5z" fill="currentColor"/></svg>
@@ -184,11 +191,20 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
   document.getElementById('bigPlay').addEventListener('click',toggle);
   pp.addEventListener('click',toggle);
   document.getElementById('replay').addEventListener('click',function(){seek(0)});
-  v.addEventListener('click',toggle);
-  snd.addEventListener('click',function(){
-    v.muted=!v.muted;snd.setAttribute('aria-pressed',String(v.muted));
+  var gestureUnmuted=false;
+  v.addEventListener('click',function(){if(gestureUnmuted)return;toggle()});
+  var hint=document.getElementById('soundHint');
+  function syncSound(){
+    snd.setAttribute('aria-pressed',String(v.muted));
     snd.textContent=v.muted?'Sonido apagado':'Sonido activado';
-  });
+    hint.hidden=!(v.muted&&!v.paused&&!v.ended);
+  }
+  function setMuted(m){v.muted=m;syncSound()}
+  snd.addEventListener('click',function(){setMuted(!v.muted)});
+  hint.addEventListener('click',function(){setMuted(false)});
+  v.addEventListener('play',syncSound);
+  v.addEventListener('pause',syncSound);
+  v.addEventListener('ended',syncSound);
   document.getElementById('copy').addEventListener('click',function(){
     var done=function(){toast.textContent='Número copiado: '+NUM};
     var fail=function(){toast.textContent='Selecciona el número para copiarlo: '+NUM};
@@ -197,6 +213,27 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
     }catch(e){fail()}
   });
   setActive(0);
+
+  // Arranque automático: primero con voz; si el navegador lo bloquea, sin sonido y el primer toque lo activa.
+  function unmuteOnGesture(){
+    document.removeEventListener('pointerdown',unmuteOnGesture,true);
+    document.removeEventListener('keydown',unmuteOnGesture,true);
+    if(v.muted&&!v.paused){setMuted(false);gestureUnmuted=true;setTimeout(function(){gestureUnmuted=false},500)}
+  }
+  function autoplay(){
+    v.muted=false;
+    var p=v.play();
+    if(!p||!p.then)return;
+    p.then(syncSound).catch(function(){
+      v.muted=true;
+      var q=v.play();
+      if(q&&q.catch)q.catch(function(){});
+      syncSound();
+      document.addEventListener('pointerdown',unmuteOnGesture,true);
+      document.addEventListener('keydown',unmuteOnGesture,true);
+    });
+  }
+  autoplay();
 })();
 </script>
 </body>
