@@ -93,8 +93,8 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
         <div class="hint">Toca para ver con sonido</div>
       </div>
       <div class="overlay endcard" id="endOv" hidden>
-        <div class="price">$40.000.000</div>
-        <div class="hint" style="font-size:24px">Negociables</div>
+        <div class="price">$36.000.000</div>
+        <div class="hint" style="font-size:24px">Precio fijo</div>
         <div class="row" style="justify-content:center">
           <a class="btn primary" id="wa2" href="#" target="_blank" rel="noopener">WhatsApp</a>
           <button class="btn ghost" id="replay">Ver de nuevo</button>
@@ -105,7 +105,7 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
     <div class="controls">
       <button class="ctl" id="pp" aria-label="Pausar">Pausa</button>
       <button class="ctl" id="snd" aria-pressed="false">Sonido activado</button>
-      <span class="time" id="time">0:00 / 0:44</span>
+      <span class="time" id="time">0:00 / 0:54</span>
     </div>
   </section>
 
@@ -113,7 +113,7 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
     <span class="tag">SE VENDE</span>
     <p class="brand">CHEVROLET</p>
     <h1>LUV 2005</h1>
-    <p class="sub">Platón con playera · Lista para trabajar</p>
+    <p class="sub">Platón con playera · Sin pico y placa</p>
 
     <h2>Salta a una parte</h2>
     <div class="chapters" id="chaps"></div>
@@ -122,7 +122,7 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
     <ul class="facts" id="facts" aria-live="polite" aria-labelledby="factsTitle"></ul>
 
     <div class="cta">
-      <div class="price">$40.000.000<span>NEGOCIABLES</span></div>
+      <div class="price">$36.000.000<span>PRECIO FIJO</span></div>
       <div class="row">
         <a class="btn primary" id="wa" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
         <button class="btn ghost" id="copy">Copiar número</button>
@@ -139,17 +139,17 @@ h2{font-family:var(--display);font-weight:600;letter-spacing:.2em;text-transform
   var PHONE='573224312018', NUM='322 431 2018';
   var MSG='Hola, me interesa la Chevrolet LUV 2005 que vi en el video.';
   var chapters=[
-    {name:'Inicio',  t:0,     facts:['Chevrolet LUV 2005','Platón con playera','Lista para trabajar']},
-    {name:'Capacidad',t:7.63, facts:['4 puertas','5 pasajeros','1 tonelada de capacidad','Nunca estrellada']},
-    {name:'Motor',   t:14.33, facts:['2.198 cc','Gasolina','Tracción 4×2','Repuesto original']},
-    {name:'Cabina',  t:21.31, facts:['Radio con pantalla','Llantas con 90 % de vida útil']},
-    {name:'Papeles', t:26.11, facts:['Placa pública de Bogotá','Afiliada a empresa de carga','Registro Nacional de Carga','Planilla nacional con vigencia de 6 meses','SOAT hasta octubre de 2027','Tecnomecánica hasta febrero de 2027']},
-    {name:'Precio',  t:34.68, facts:['$40.000.000 negociables','Información: '+NUM,'Sin aire acondicionado','Algunas novedades de pintura y latonería']}
+    {name:'Inicio',  t:0,     facts:['Chevrolet LUV 2005','Platón con playera','Sin pico y placa','Lista para trabajar']},
+    {name:'Capacidad',t:8.37, facts:['4 puertas','5 pasajeros','1 tonelada de capacidad','Nunca estrellada']},
+    {name:'Motor',   t:15.77, facts:['2.198 cc','Gasolina','Tracción 4×2','Repuesto original']},
+    {name:'Cabina',  t:25.0, facts:['Radio con pantalla','Llantas con 90 % de vida útil']},
+    {name:'Papeles', t:30.74, facts:['Placa pública de Bogotá','Sin pico y placa','Afiliada a empresa de carga','Registro Nacional de Carga','Planilla nacional con vigencia de 6 meses','SOAT hasta octubre de 2027','Tecnomecánica hasta febrero de 2027']},
+    {name:'Precio',  t:40.88, facts:['$36.000.000 precio fijo','Información: '+NUM,'Sin aire acondicionado','Algunas novedades de pintura y latonería']}
   ];
   var v=document.getElementById('v'), segs=document.getElementById('segs'), chaps=document.getElementById('chaps'),
       facts=document.getElementById('facts'), startOv=document.getElementById('startOv'), endOv=document.getElementById('endOv'),
       pp=document.getElementById('pp'), snd=document.getElementById('snd'), timeEl=document.getElementById('time'),
-      toast=document.getElementById('toast'), active=-1, total=44.27;
+      toast=document.getElementById('toast'), active=-1, total=54.73;
 
   var wa='https://wa.me/'+PHONE+'?text='+encodeURIComponent(MSG);
   document.getElementById('wa').href=wa; document.getElementById('wa2').href=wa;
